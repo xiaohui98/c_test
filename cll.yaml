@@ -7,28 +7,21 @@ external-controller: :9090
 dns:
   enabled: true
   nameserver:
-    - 154.9.247.206
-    - https://gotkicry.com:6443/dns-query
-    - tls://gotkicry.com:853
-  fallback:
     - 119.29.29.29
     - 223.5.5.5
+  fallback:
     - 8.8.8.8
     - 8.8.4.4
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: Argo-Vless, type: vless, server: icook.hk, port: 443, uuid: de04add9-5c68-8bab-950c-08cd5320df18, tls: true, servername: arkansas-ebook-councils-programmes.trycloudflare.com, skip-cert-verify: false, network: ws, ws-opts: {path: /argo-vless?ed=2048, headers: { Host: arkansas-ebook-councils-programmes.trycloudflare.com}}, udp: true}
-  - {name: Argo-Vmess, type: vmess, server: icook.hk, port: 443, uuid: de04add9-5c68-8bab-950c-08cd5320df18, alterId: 0, cipher: none, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /argo-vmess?ed=2048, headers: {Host: arkansas-ebook-councils-programmes.trycloudflare.com}}, udp: true}
-  - {name: Argo-Trojan, type: trojan, server: icook.hk, port: 443, password: de04add9-5c68-8bab-950c-08cd5320df18, udp: true, tls: true, sni: arkansas-ebook-councils-programmes.trycloudflare.com, skip-cert-verify: false, network: ws, ws-opts: { path: /argo-trojan?ed=2048, headers: { Host: arkansas-ebook-councils-programmes.trycloudflare.com } } }
-  - {name: Argo-Shadowsocks, type: ss, server: icook.hk, port: 443, cipher: chacha20-ietf-poly1305, password: de04add9-5c68-8bab-950c-08cd5320df18, plugin: v2ray-plugin, plugin-opts: { mode: websocket, host: arkansas-ebook-councils-programmes.trycloudflare.com, path: /argo-shadowsocks?ed=2048, tls: true, skip-cert-verify: false, mux: false } }
+  - {name: Argo-Vless, server: icook.hk, port: 443, client-fingerprint: chrome, type: vless, uuid: de04add9-5c68-8bab-950c-08cd5320df18, tls: true, tfo: false, servername: arkansas-ebook-councils-programmes.trycloudflare.com, skip-cert-verify: false, network: ws, ws-opts: {path: "/argo-vless?ed=2048", headers: {Host: arkansas-ebook-councils-programmes.trycloudflare.com}}}
+  - {name: Argo-Trojan, server: icook.hk, port: 443, client-fingerprint: chrome, type: trojan, password: de04add9-5c68-8bab-950c-08cd5320df18, skip-cert-verify: false}
+  - {name: Argo-Shadowsocks, server: icook.hk, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: de04add9-5c68-8bab-950c-08cd5320df18, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🔮 负载均衡
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
@@ -40,178 +33,13 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
-      - Ru_Trojan
-      - Ru_Hysteria
-      - Ru_Vless
-      - Hysteria
-      - xray-trojan
-      - vless
-      - 距离下次重置剩余：12 天
-      - 🇯🇵 9月22日地址更换务必保存↓
-      - https://yunfast.app
-      - 🇭🇰 香港 S01
-      - 🇭🇰 香港 S02
-      - 🇭🇰 香港 S03
-      - 🇭🇰 香港原生 S01
-      - 🇭🇰 香港原生 S02
-      - 🇭🇰 香港原生 S03
-      - 🇸🇬 新加坡 S01
-      - 🇸🇬 新加坡 S02
-      - 🇸🇬 新加坡 S03
-      - 🇯🇵 日本 S01
-      - 🇯🇵 日本 S02
-      - 🇯🇵 日本 S03
-      - 🇹🇼 台湾原生 S01
-      - 🇹🇼 台湾原生 S02
-      - 🇹🇼 台湾原生 S03
-      - 🇰🇷 韩国 S01
-      - 🇰🇷 韩国 S02
-      - 🇰🇷 韩国 S03
-      - 🇺🇸 美国 S01
-      - 🇺🇸 美国 S02
-      - 🇺🇸 美国 S03
-      - 🇬🇧 英国 S01
-      - 🇬🇧 英国 S02
-      - 🇬🇧 英国 S03
-      - 🇦🇺 澳大利亚 S01
-      - 🇦🇺 澳大利亚 S02
-      - 🇦🇺 澳大利亚 S03
-      - 🇸🇬 ℹ️请保持更新订阅
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - Ru_Trojan
-      - Ru_Hysteria
-      - Ru_Vless
-      - Hysteria
-      - xray-trojan
-      - vless
-      - 距离下次重置剩余：12 天
-      - 🇯🇵 9月22日地址更换务必保存↓
-      - https://yunfast.app
-      - 🇭🇰 香港 S01
-      - 🇭🇰 香港 S02
-      - 🇭🇰 香港 S03
-      - 🇭🇰 香港原生 S01
-      - 🇭🇰 香港原生 S02
-      - 🇭🇰 香港原生 S03
-      - 🇸🇬 新加坡 S01
-      - 🇸🇬 新加坡 S02
-      - 🇸🇬 新加坡 S03
-      - 🇯🇵 日本 S01
-      - 🇯🇵 日本 S02
-      - 🇯🇵 日本 S03
-      - 🇹🇼 台湾原生 S01
-      - 🇹🇼 台湾原生 S02
-      - 🇹🇼 台湾原生 S03
-      - 🇰🇷 韩国 S01
-      - 🇰🇷 韩国 S02
-      - 🇰🇷 韩国 S03
-      - 🇺🇸 美国 S01
-      - 🇺🇸 美国 S02
-      - 🇺🇸 美国 S03
-      - 🇬🇧 英国 S01
-      - 🇬🇧 英国 S02
-      - 🇬🇧 英国 S03
-      - 🇦🇺 澳大利亚 S01
-      - 🇦🇺 澳大利亚 S02
-      - 🇦🇺 澳大利亚 S03
-      - 🇸🇬 ℹ️请保持更新订阅
-  - name: 🔯 故障转移
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - Ru_Trojan
-      - Ru_Hysteria
-      - Ru_Vless
-      - Hysteria
-      - xray-trojan
-      - vless
-      - 距离下次重置剩余：12 天
-      - 🇯🇵 9月22日地址更换务必保存↓
-      - https://yunfast.app
-      - 🇭🇰 香港 S01
-      - 🇭🇰 香港 S02
-      - 🇭🇰 香港 S03
-      - 🇭🇰 香港原生 S01
-      - 🇭🇰 香港原生 S02
-      - 🇭🇰 香港原生 S03
-      - 🇸🇬 新加坡 S01
-      - 🇸🇬 新加坡 S02
-      - 🇸🇬 新加坡 S03
-      - 🇯🇵 日本 S01
-      - 🇯🇵 日本 S02
-      - 🇯🇵 日本 S03
-      - 🇹🇼 台湾原生 S01
-      - 🇹🇼 台湾原生 S02
-      - 🇹🇼 台湾原生 S03
-      - 🇰🇷 韩国 S01
-      - 🇰🇷 韩国 S02
-      - 🇰🇷 韩国 S03
-      - 🇺🇸 美国 S01
-      - 🇺🇸 美国 S02
-      - 🇺🇸 美国 S03
-      - 🇬🇧 英国 S01
-      - 🇬🇧 英国 S02
-      - 🇬🇧 英国 S03
-      - 🇦🇺 澳大利亚 S01
-      - 🇦🇺 澳大利亚 S02
-      - 🇦🇺 澳大利亚 S03
-      - 🇸🇬 ℹ️请保持更新订阅
-  - name: 🔮 负载均衡
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - Ru_Trojan
-      - Ru_Hysteria
-      - Ru_Vless
-      - Hysteria
-      - xray-trojan
-      - vless
-      - 距离下次重置剩余：12 天
-      - 🇯🇵 9月22日地址更换务必保存↓
-      - https://yunfast.app
-      - 🇭🇰 香港 S01
-      - 🇭🇰 香港 S02
-      - 🇭🇰 香港 S03
-      - 🇭🇰 香港原生 S01
-      - 🇭🇰 香港原生 S02
-      - 🇭🇰 香港原生 S03
-      - 🇸🇬 新加坡 S01
-      - 🇸🇬 新加坡 S02
-      - 🇸🇬 新加坡 S03
-      - 🇯🇵 日本 S01
-      - 🇯🇵 日本 S02
-      - 🇯🇵 日本 S03
-      - 🇹🇼 台湾原生 S01
-      - 🇹🇼 台湾原生 S02
-      - 🇹🇼 台湾原生 S03
-      - 🇰🇷 韩国 S01
-      - 🇰🇷 韩国 S02
-      - 🇰🇷 韩国 S03
-      - 🇺🇸 美国 S01
-      - 🇺🇸 美国 S02
-      - 🇺🇸 美国 S03
-      - 🇬🇧 英国 S01
-      - 🇬🇧 英国 S02
-      - 🇬🇧 英国 S03
-      - 🇦🇺 澳大利亚 S01
-      - 🇦🇺 澳大利亚 S02
-      - 🇦🇺 澳大利亚 S03
-      - 🇸🇬 ℹ️请保持更新订阅
+      - Argo-Vless
+      - Argo-Trojan
+      - Argo-Shadowsocks
   - name: 📲 电报消息
     type: select
     proxies:
       - 🚀 节点选择
-      - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
@@ -224,7 +52,6 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 节点选择
-      - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
@@ -237,7 +64,6 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 节点选择
-      - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
@@ -251,7 +77,6 @@ proxy-groups:
     proxies:
       - 🎥 奈飞节点
       - 🚀 节点选择
-      - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
@@ -277,7 +102,6 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 节点选择
-      - ♻️ 自动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
@@ -296,6 +120,18 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🚀 手动切换
   - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软Bing
     type: select
     proxies:
       - DIRECT
@@ -360,13 +196,11 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
   - name: 🛑 广告拦截
     type: select
     proxies:
@@ -381,7 +215,6 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 节点选择
-      - ♻️ 自动选择
       - DIRECT
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
@@ -391,63 +224,29 @@ proxy-groups:
       - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 🇭🇰 香港节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    type: select
     proxies:
-      - 🇭🇰 香港 S01
-      - 🇭🇰 香港 S02
-      - 🇭🇰 香港 S03
-      - 🇭🇰 香港原生 S01
-      - 🇭🇰 香港原生 S02
-      - 🇭🇰 香港原生 S03
+      - DIRECT
   - name: 🇯🇵 日本节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    type: select
     proxies:
-      - 🇯🇵 9月22日地址更换务必保存↓
-      - 🇯🇵 日本 S01
-      - 🇯🇵 日本 S02
-      - 🇯🇵 日本 S03
+      - DIRECT
   - name: 🇺🇲 美国节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150
+    type: select
     proxies:
-      - 🇺🇸 美国 S01
-      - 🇺🇸 美国 S02
-      - 🇺🇸 美国 S03
-  - name: 🇨🇳 台湾节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 🇹🇼 台湾原生 S01
-      - 🇹🇼 台湾原生 S02
-      - 🇹🇼 台湾原生 S03
+      - DIRECT
   - name: 🇸🇬 狮城节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    type: select
     proxies:
-      - 🇸🇬 新加坡 S01
-      - 🇸🇬 新加坡 S02
-      - 🇸🇬 新加坡 S03
+      - DIRECT
+  - name: 🇨🇳 台湾节点
+    type: select
+    proxies:
+      - DIRECT
   - name: 🇰🇷 韩国节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    type: select
     proxies:
-      - 🇰🇷 韩国 S01
-      - 🇰🇷 韩国 S02
-      - 🇰🇷 韩国 S03
+      - DIRECT
   - name: 🎥 奈飞节点
     type: select
     proxies:
@@ -924,6 +723,7 @@ rules:
   - DOMAIN-SUFFIX,zhjfad.com,🛑 广告拦截
   - DOMAIN-SUFFIX,zqzxz.com,🛑 广告拦截
   - DOMAIN-SUFFIX,zzsx8.com,🛑 广告拦截
+  - DOMAIN-SUFFIX,wwads.cn,🛑 广告拦截
   - DOMAIN-SUFFIX,acuityplatform.com,🛑 广告拦截
   - DOMAIN-SUFFIX,ad-stir.com,🛑 广告拦截
   - DOMAIN-SUFFIX,ad-survey.com,🛑 广告拦截
@@ -2200,6 +2000,8 @@ rules:
   - DOMAIN-SUFFIX,steamchina.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamcontent.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamusercontent.com,🎯 全球直连
+  - DOMAIN-SUFFIX,bing.com,Ⓜ️ 微软Bing
+  - DOMAIN-SUFFIX,copilot.microsoft.com,Ⓜ️ 微软Bing
   - PROCESS-NAME,OneDrive,Ⓜ️ 微软云盘
   - PROCESS-NAME,OneDriveUpdater,Ⓜ️ 微软云盘
   - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软云盘
@@ -2345,6 +2147,8 @@ rules:
   - DOMAIN-SUFFIX,identrust.com,💬 OpenAi
   - DOMAIN-SUFFIX,intercom.io,💬 OpenAi
   - DOMAIN-SUFFIX,intercomcdn.com,💬 OpenAi
+  - DOMAIN-SUFFIX,oaistatic.com,💬 OpenAi
+  - DOMAIN-SUFFIX,oaiusercontent.com,💬 OpenAi
   - DOMAIN-SUFFIX,openai.com,💬 OpenAi
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,💬 OpenAi
   - DOMAIN-SUFFIX,sentry.io,💬 OpenAi
@@ -2821,6 +2625,8 @@ rules:
   - DOMAIN-SUFFIX,identrust.com,🌍 国外媒体
   - DOMAIN-SUFFIX,intercom.io,🌍 国外媒体
   - DOMAIN-SUFFIX,intercomcdn.com,🌍 国外媒体
+  - DOMAIN-SUFFIX,oaistatic.com,🌍 国外媒体
+  - DOMAIN-SUFFIX,oaiusercontent.com,🌍 国外媒体
   - DOMAIN-SUFFIX,openai.com,🌍 国外媒体
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🌍 国外媒体
   - DOMAIN-SUFFIX,sentry.io,🌍 国外媒体
@@ -2918,6 +2724,7 @@ rules:
   - DOMAIN-SUFFIX,tumbex.com,🚀 节点选择
   - DOMAIN-SUFFIX,twdvd.com,🚀 节点选择
   - DOMAIN-SUFFIX,unsplash.com,🚀 节点选择
+  - DOMAIN-SUFFIX,buzzsprout.com,🚀 节点选择
   - DOMAIN-SUFFIX,eu,🚀 节点选择
   - DOMAIN-SUFFIX,hk,🚀 节点选择
   - DOMAIN-SUFFIX,jp,🚀 节点选择
@@ -3053,7 +2860,6 @@ rules:
   - DOMAIN-SUFFIX,6parkbbs.com,🚀 节点选择
   - DOMAIN-SUFFIX,6parker.com,🚀 节点选择
   - DOMAIN-SUFFIX,6parknews.com,🚀 节点选择
-  - DOMAIN-SUFFIX,7-zip.org,🚀 节点选择
   - DOMAIN-SUFFIX,7capture.com,🚀 节点选择
   - DOMAIN-SUFFIX,7cow.com,🚀 节点选择
   - DOMAIN-SUFFIX,8-d.com,🚀 节点选择
@@ -3371,6 +3177,7 @@ rules:
   - DOMAIN-SUFFIX,backchina.com,🚀 节点选择
   - DOMAIN-SUFFIX,backpackers.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,backtotiananmen.com,🚀 节点选择
+  - DOMAIN-SUFFIX,bad.news,🚀 节点选择
   - DOMAIN-SUFFIX,badiucao.com,🚀 节点选择
   - DOMAIN-SUFFIX,badjojo.com,🚀 节点选择
   - DOMAIN-SUFFIX,badoo.com,🚀 节点选择
@@ -3880,7 +3687,7 @@ rules:
   - DOMAIN-SUFFIX,civiliangunner.com,🚀 节点选择
   - DOMAIN-SUFFIX,civilmedia.tw,🚀 节点选择
   - DOMAIN-SUFFIX,civisec.org,🚀 节点选择
-  - DOMAIN-SUFFIX,cjb.net,🚀 节点选择
+  - DOMAIN-SUFFIX,civitai.com,🚀 节点选择
   - DOMAIN-SUFFIX,ck101.com,🚀 节点选择
   - DOMAIN-SUFFIX,clarionproject.org,🚀 节点选择
   - DOMAIN-SUFFIX,classicalguitarblog.net,🚀 节点选择
@@ -4892,6 +4699,7 @@ rules:
   - DOMAIN-SUFFIX,goagent.biz,🚀 节点选择
   - DOMAIN-SUFFIX,goagentplus.com,🚀 节点选择
   - DOMAIN-SUFFIX,gobet.cc,🚀 节点选择
+  - DOMAIN-SUFFIX,godaddy.com,🚀 节点选择
   - DOMAIN-SUFFIX,godfootsteps.org,🚀 节点选择
   - DOMAIN-SUFFIX,godns.work,🚀 节点选择
   - DOMAIN-SUFFIX,godoc.org,🚀 节点选择
@@ -5604,6 +5412,7 @@ rules:
   - DOMAIN-SUFFIX,info-graf.fr,🚀 节点选择
   - DOMAIN-SUFFIX,informer.com,🚀 节点选择
   - DOMAIN-SUFFIX,initiativesforchina.org,🚀 节点选择
+  - DOMAIN-SUFFIX,inkbunny.net,🚀 节点选择
   - DOMAIN-SUFFIX,inkui.com,🚀 节点选择
   - DOMAIN-SUFFIX,inmediahk.net,🚀 节点选择
   - DOMAIN-SUFFIX,innermongolia.org,🚀 节点选择
@@ -5664,6 +5473,7 @@ rules:
   - DOMAIN-SUFFIX,israbox.com,🚀 节点选择
   - DOMAIN-SUFFIX,issuu.com,🚀 节点选择
   - DOMAIN-SUFFIX,istars.co.nz,🚀 节点选择
+  - DOMAIN-SUFFIX,istarshine.com,🚀 节点选择
   - DOMAIN-SUFFIX,istef.info,🚀 节点选择
   - DOMAIN-SUFFIX,istiqlalhewer.com,🚀 节点选择
   - DOMAIN-SUFFIX,istockphoto.com,🚀 节点选择
@@ -5959,6 +5769,7 @@ rules:
   - DOMAIN-SUFFIX,lfpcontent.com,🚀 节点选择
   - DOMAIN-SUFFIX,lhakar.org,🚀 节点选择
   - DOMAIN-SUFFIX,lhasocialwork.org,🚀 节点选择
+  - DOMAIN-SUFFIX,li.taipei,🚀 节点选择
   - DOMAIN-SUFFIX,liangyou.net,🚀 节点选择
   - DOMAIN-SUFFIX,liangzhichuanmei.com,🚀 节点选择
   - DOMAIN-SUFFIX,lianyue.net,🚀 节点选择
@@ -6123,6 +5934,7 @@ rules:
   - DOMAIN-SUFFIX,matrix.org,🚀 节点选择
   - DOMAIN-SUFFIX,matsushimakaede.com,🚀 节点选择
   - DOMAIN-SUFFIX,matters.news,🚀 节点选择
+  - DOMAIN-SUFFIX,matters.town,🚀 节点选择
   - DOMAIN-SUFFIX,mattwilcox.net,🚀 节点选择
   - DOMAIN-SUFFIX,maturejp.com,🚀 节点选择
   - DOMAIN-SUFFIX,maxing.jp,🚀 节点选择
@@ -6270,6 +6082,7 @@ rules:
   - DOMAIN-SUFFIX,mondex.org,🚀 节点选择
   - DOMAIN-SUFFIX,money-link.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,moneyhome.biz,🚀 节点选择
+  - DOMAIN-SUFFIX,monica.im,🚀 节点选择
   - DOMAIN-SUFFIX,monitorchina.org,🚀 节点选择
   - DOMAIN-SUFFIX,monitorware.com,🚀 节点选择
   - DOMAIN-SUFFIX,monlamit.org,🚀 节点选择
@@ -6742,7 +6555,6 @@ rules:
   - DOMAIN-SUFFIX,page.link,🚀 节点选择
   - DOMAIN-SUFFIX,page.tl,🚀 节点选择
   - DOMAIN-SUFFIX,page2rss.com,🚀 节点选择
-  - DOMAIN-SUFFIX,pages.dev,🚀 节点选择
   - DOMAIN-SUFFIX,pagodabox.com,🚀 节点选择
   - DOMAIN-SUFFIX,palacemoon.com,🚀 节点选择
   - DOMAIN-SUFFIX,paldengyal.com,🚀 节点选择
@@ -7978,7 +7790,6 @@ rules:
   - DOMAIN-SUFFIX,tracfone.com,🚀 节点选择
   - DOMAIN-SUFFIX,tradingview.com,🚀 节点选择
   - DOMAIN-SUFFIX,translate.goog,🚀 节点选择
-  - DOMAIN-SUFFIX,translate.google,🚀 节点选择
   - DOMAIN-SUFFIX,transparency.org,🚀 节点选择
   - DOMAIN-SUFFIX,treemall.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,trendsmap.com,🚀 节点选择
@@ -9055,6 +8866,7 @@ rules:
   - DOMAIN-SUFFIX,ypncdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,pixiv.net,🚀 节点选择
   - DOMAIN-SUFFIX,pximg.net,🚀 节点选择
+  - DOMAIN-SUFFIX,fanbox.cc,🚀 节点选择
   - DOMAIN-SUFFIX,amplitude.com,🚀 节点选择
   - DOMAIN-SUFFIX,firebaseio.com,🚀 节点选择
   - DOMAIN-SUFFIX,hockeyapp.net,🚀 节点选择
@@ -9151,6 +8963,7 @@ rules:
   - DOMAIN-SUFFIX,zhenguanyu.biz,🎯 全球直连
   - DOMAIN-SUFFIX,zhenguanyu.com,🎯 全球直连
   - DOMAIN-SUFFIX,snapdrop.net,🎯 全球直连
+  - DOMAIN-SUFFIX,tebex.io,🎯 全球直连
   - DOMAIN-SUFFIX,cn,🎯 全球直连
   - DOMAIN-SUFFIX,xn--fiqs8s,🎯 全球直连
   - DOMAIN-SUFFIX,xn--55qx5d,🎯 全球直连
@@ -9201,6 +9014,7 @@ rules:
   - DOMAIN-SUFFIX,aliyuncdn.com,🎯 全球直连
   - DOMAIN-SUFFIX,aliyuncs.com,🎯 全球直连
   - DOMAIN-SUFFIX,aliyundrive.com,🎯 全球直连
+  - DOMAIN-SUFFIX,aliyundrive.net,🎯 全球直连
   - DOMAIN-SUFFIX,amap.com,🎯 全球直连
   - DOMAIN-SUFFIX,autonavi.com,🎯 全球直连
   - DOMAIN-SUFFIX,dingtalk.com,🎯 全球直连
@@ -9317,6 +9131,18 @@ rules:
   - DOMAIN-SUFFIX,hwccpc.com,🎯 全球直连
   - DOMAIN-SUFFIX,vmall.com,🎯 全球直连
   - DOMAIN-SUFFIX,vmallres.com,🎯 全球直连
+  - DOMAIN-SUFFIX,allawnfs.com,🎯 全球直连
+  - DOMAIN-SUFFIX,allawno.com,🎯 全球直连
+  - DOMAIN-SUFFIX,allawntech.com,🎯 全球直连
+  - DOMAIN-SUFFIX,coloros.com,🎯 全球直连
+  - DOMAIN-SUFFIX,heytap.com,🎯 全球直连
+  - DOMAIN-SUFFIX,heytapcs.com,🎯 全球直连
+  - DOMAIN-SUFFIX,heytapdownload.com,🎯 全球直连
+  - DOMAIN-SUFFIX,heytapimage.com,🎯 全球直连
+  - DOMAIN-SUFFIX,heytapmobi.com,🎯 全球直连
+  - DOMAIN-SUFFIX,oppo.com,🎯 全球直连
+  - DOMAIN-SUFFIX,oppoer.me,🎯 全球直连
+  - DOMAIN-SUFFIX,oppomobile.com,🎯 全球直连
   - DOMAIN-SUFFIX,iflyink.com,🎯 全球直连
   - DOMAIN-SUFFIX,iflyrec.com,🎯 全球直连
   - DOMAIN-SUFFIX,iflytek.com,🎯 全球直连
@@ -9515,6 +9341,7 @@ rules:
   - DOMAIN-SUFFIX,biqudu.com,🎯 全球直连
   - DOMAIN-SUFFIX,biquge.com,🎯 全球直连
   - DOMAIN-SUFFIX,bitauto.com,🎯 全球直连
+  - DOMAIN-SUFFIX,bosszhipin.com,🎯 全球直连
   - DOMAIN-SUFFIX,c-ctrip.com,🎯 全球直连
   - DOMAIN-SUFFIX,camera360.com,🎯 全球直连
   - DOMAIN-SUFFIX,cdnmama.com,🎯 全球直连
@@ -9631,7 +9458,6 @@ rules:
   - DOMAIN-SUFFIX,onedns.net,🎯 全球直连
   - DOMAIN-SUFFIX,oneplus.com,🎯 全球直连
   - DOMAIN-SUFFIX,onlinedown.net,🎯 全球直连
-  - DOMAIN-SUFFIX,oppo.com,🎯 全球直连
   - DOMAIN-SUFFIX,oracle.com,🎯 全球直连
   - DOMAIN-SUFFIX,oschina.net,🎯 全球直连
   - DOMAIN-SUFFIX,ourdvs.com,🎯 全球直连
@@ -9724,6 +9550,7 @@ rules:
   - DOMAIN-SUFFIX,zhaopin.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhihu.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhimg.com,🎯 全球直连
+  - DOMAIN-SUFFIX,zhipin.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhongsou.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhuihd.com,🎯 全球直连
   - IP-CIDR,8.128.0.0/10,🎯 全球直连,no-resolve
