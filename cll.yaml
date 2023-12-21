@@ -18,43 +18,10 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: Ru_Trojan, server: ru.gotkicry.com, port: 5443, client-fingerprint: chrome, type: trojan, password: s2zfOoOubUwiHq134Wk5fuZ3InXfJRTiIDuEE6wVKirpniU8, tfo: false, sni: ru.gotkicry.com, skip-cert-verify: false}
-  - {name: Ru_Hysteria, server: ru.gotkicry.com, port: 5677, client-fingerprint: chrome, type: hysteria, auth_str: s2zfOoOubUwiHq134Wk5fuZ3InXfJRTiIDuEE6wVKirpniU8, up: 100, down: 100, fast-open: false, protocol: udp, sni: ru.gotkicry.com, skip-cert-verify: true, obfs: justfast}
-  - {name: Ru_Vless, server: ru.gotkicry.com, port: 6739, reality-opts: {public-key: TihMzsZ0Ks6gAEz2XVmULvkZw5e7uVuenVUaEqujGmY, short-id: 5eb5c265379ae0cf}, client-fingerprint: chrome, type: vless, uuid: fe7ea044-8082-5c1e-99d2-92919c9dcd00, tls: true, tfo: false, servername: ru.gotkicry.com, flow: xtls-rprx-vision, skip-cert-verify: false}
-  - {name: Hysteria, server: hk.gotkicry.com, port: 5678, client-fingerprint: chrome, type: hysteria, auth_str: s2zfOoOubUwiHq134Wk5fuZ3InXfJRTiIDuEE6wVKirpniU8, up: 100, down: 100, fast-open: false, protocol: udp, sni: hk.gotkicry.com, skip-cert-verify: true, obfs: hyperX}
-  - {name: xray-trojan, server: hk.gotkicry.com, port: 5443, client-fingerprint: chrome, type: trojan, password: s2zfOoOubUwiHq134Wk5fuZ3InXfJRTiIDuEE6wVKirpniU8, tfo: false, sni: hk.gotkicry.com, skip-cert-verify: false}
-  - {name: vless, server: hk.gotkicry.com, port: 444, reality-opts: {public-key: _Wfg1XyMkswKjdgbLD4clyhARrNTQkFSMZ0KgFVcxkE, short-id: c3d086c4bcb90883}, client-fingerprint: chrome, type: vless, uuid: fe7ea044-8082-5c1e-99d2-92919c9dcd00, tls: true, tfo: false, servername: hk.gotkicry.com, flow: xtls-rprx-vision, skip-cert-verify: false}
-  - {name: 距离下次重置剩余：12 天, server: s1.xdns.men, port: 56601, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇯🇵 9月22日地址更换务必保存↓, server: s1.xdns.men, port: 56601, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: https://yunfast.app, server: s1.xdns.men, port: 56601, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇭🇰 香港 S01, server: s1.xdns.men, port: 56601, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇭🇰 香港 S02, server: s1.xdns.bid, port: 56601, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇭🇰 香港 S03, server: s1.xdns.win, port: 56601, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇭🇰 香港原生 S01, server: s2.xdns.men, port: 56602, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇭🇰 香港原生 S02, server: s2.xdns.bid, port: 56602, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇭🇰 香港原生 S03, server: s2.xdns.win, port: 56602, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇸🇬 新加坡 S01, server: s3.xdns.men, port: 56603, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇸🇬 新加坡 S02, server: s3.xdns.bid, port: 56603, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇸🇬 新加坡 S03, server: s3.xdns.win, port: 56603, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇯🇵 日本 S01, server: s4.xdns.men, port: 56604, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇯🇵 日本 S02, server: s4.xdns.bid, port: 56604, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇯🇵 日本 S03, server: s4.xdns.win, port: 56604, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇹🇼 台湾原生 S01, server: s6.xdns.men, port: 56606, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇹🇼 台湾原生 S02, server: s6.xdns.bid, port: 56606, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇹🇼 台湾原生 S03, server: s6.xdns.win, port: 56606, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇰🇷 韩国 S01, server: s7.xdns.men, port: 56607, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇰🇷 韩国 S02, server: s7.xdns.bid, port: 56607, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇰🇷 韩国 S03, server: s7.xdns.win, port: 56607, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇺🇸 美国 S01, server: s5.xdns.men, port: 56605, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇺🇸 美国 S02, server: s5.xdns.bid, port: 56605, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇺🇸 美国 S03, server: s5.xdns.win, port: 56605, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇬🇧 英国 S01, server: s8.xdns.men, port: 56608, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇬🇧 英国 S02, server: s8.xdns.bid, port: 56608, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇬🇧 英国 S03, server: s8.xdns.win, port: 56608, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇦🇺 澳大利亚 S01, server: s9.xdns.men, port: 56609, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇦🇺 澳大利亚 S02, server: s9.xdns.bid, port: 56609, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇦🇺 澳大利亚 S03, server: s9.xdns.win, port: 56609, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
-  - {name: 🇸🇬 ℹ️请保持更新订阅, server: 127.0.0.1, port: 10086, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a62f031a-076a-45fc-98bf-c45b8b1fb6fc, tfo: false}
+  - {name: Argo-Vless, type: vless, server: icook.hk, port: 443, uuid: de04add9-5c68-8bab-950c-08cd5320df18, tls: true, servername: arkansas-ebook-councils-programmes.trycloudflare.com, skip-cert-verify: false, network: ws, ws-opts: {path: /argo-vless?ed=2048, headers: { Host: arkansas-ebook-councils-programmes.trycloudflare.com}}, udp: true}
+  - {name: Argo-Vmess, type: vmess, server: icook.hk, port: 443, uuid: de04add9-5c68-8bab-950c-08cd5320df18, alterId: 0, cipher: none, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /argo-vmess?ed=2048, headers: {Host: arkansas-ebook-councils-programmes.trycloudflare.com}}, udp: true}
+  - {name: Argo-Trojan, type: trojan, server: icook.hk, port: 443, password: de04add9-5c68-8bab-950c-08cd5320df18, udp: true, tls: true, sni: arkansas-ebook-councils-programmes.trycloudflare.com, skip-cert-verify: false, network: ws, ws-opts: { path: /argo-trojan?ed=2048, headers: { Host: arkansas-ebook-councils-programmes.trycloudflare.com } } }
+  - {name: Argo-Shadowsocks, type: ss, server: icook.hk, port: 443, cipher: chacha20-ietf-poly1305, password: de04add9-5c68-8bab-950c-08cd5320df18, plugin: v2ray-plugin, plugin-opts: { mode: websocket, host: arkansas-ebook-councils-programmes.trycloudflare.com, path: /argo-shadowsocks?ed=2048, tls: true, skip-cert-verify: false, mux: false } }
 proxy-groups:
   - name: 🚀 节点选择
     type: select
