@@ -80,14 +80,14 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-  - {name: "☁️ xiao1",type: wireguard,server: 162.159.192.35,port: 928,ip: 192.168.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: mIOsfNOQ7hwE45oXnFL8ReIjdb0rHOYs/YYYRTD4wFw=,remote-dns-resolve: false,udp: true}
-  - {name: "☁️ xiao2",type: wireguard,server: 162.159.195.65,port: 1014,ip: 192.168.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: mIOsfNOQ7hwE45oXnFL8ReIjdb0rHOYs/YYYRTD4wFw=,remote-dns-resolve: false,udp: true}
-  - {name: "☁️ xiao3",type: wireguard,server: 162.159.192.36,port: 1014,ip: 192.168.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: mIOsfNOQ7hwE45oXnFL8ReIjdb0rHOYs/YYYRTD4wFw=,remote-dns-resolve: false,udp: true}
-  - {name: "☁️ xiao4",type: wireguard,server: 162.159.195.65,port: 928,ip: 192.168.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: mIOsfNOQ7hwE45oXnFL8ReIjdb0rHOYs/YYYRTD4wFw=,remote-dns-resolve: false,udp: true}
-  - {name: "☁️ xiao5",type: wireguard,server: 162.159.192.171,port: 500,ip: 192.168.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: mIOsfNOQ7hwE45oXnFL8ReIjdb0rHOYs/YYYRTD4wFw=,remote-dns-resolve: false,udp: true}
-  - {name: "☁️ xiao6",type: wireguard,server: 162.159.195.11,port: 928,ip: 192.168.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: mIOsfNOQ7hwE45oXnFL8ReIjdb0rHOYs/YYYRTD4wFw=,remote-dns-resolve: false,udp: true}
-  - {name: "☁️ xiao7",type: wireguard,server: 162.159.192.171,port: 928,ip: 192.168.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: mIOsfNOQ7hwE45oXnFL8ReIjdb0rHOYs/YYYRTD4wFw=,remote-dns-resolve: false,udp: true}
-  - {name: "☁️ xiao8",type: wireguard,server: 162.159.192.155,port: 928,ip: 192.168.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: mIOsfNOQ7hwE45oXnFL8ReIjdb0rHOYs/YYYRTD4wFw=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ xiao1",type: wireguard,server: 162.159.195.253,port: 3138,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: sNz+AkExJHnkcevJTQQt40PnZWquX1d9Zf7o1nPzPXQ=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ xiao2",type: wireguard,server: 162.159.192.25,port: 1180,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: MGihxQRBaibwILm1c09m/A1YvssjTfXC5uXjJBrcSUw=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ xiao3",type: wireguard,server: 162.159.192.150,port: 1180,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: +Ifwi86zO7qaHEhdSNJOR4I8Jhy6aB5RFkvFbnthtGw=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ xiao4",type: wireguard,server: 162.159.195.83,port: 1180,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: iJYzSWiMVc92SWzFcG4SCN6OuCXCC3TdEuEMTYONC0A=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ xiao5",type: wireguard,server: 162.159.195.202,port: 3138,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: aJvJxrf78ZQ5Ahd0ExLKL8LOrNRdMleS5Kf58eaF6Vo=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ xiao6",type: wireguard,server: 162.159.192.25,port: 3138,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: OCb1tCzq0nYE5j5Z1HZbh6oypAl/bOTTHVqgGJSLGUc=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ xiao7",type: wireguard,server: 162.159.192.150,port: 3138,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: sMXxy9KnqzvnVZegv+hDJehRZ2sBqERjOkAQKZdKUVY=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ xiao8",type: wireguard,server: 162.159.192.61,port: 3138,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: QNwolviJty9YUsSYRvNm2X8eg0P/Tk/tjqX0YTzaE1s=,remote-dns-resolve: false,udp: true}
  proxy-groups:
   - name: 🚀 节点选择
     type: select
